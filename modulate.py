@@ -28,7 +28,7 @@ if audio.ndim > 1:
 filtered_audio = lowpass_filter(audio, sample_rate, cutoff=3000)
 
 # === Generate high-frequency carrier (e.g., 17 kHz) ===
-carrier_freq = 17000  # Hz
+carrier_freq = 17500  # Hz
 t = np.linspace(0, len(filtered_audio) / sample_rate, len(filtered_audio), endpoint=False)
 carrier = np.sin(2 * np.pi * carrier_freq * t)
 
